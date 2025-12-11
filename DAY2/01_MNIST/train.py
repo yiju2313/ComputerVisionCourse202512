@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 # ============== 設定區 ==============
 BATCH_SIZE = 64          # 批次大小
-EPOCHS = 10              # 訓練輪數
+EPOCHS = 20              # 訓練輪數
 LEARNING_RATE = 0.001    # 學習率
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 DATA_DIR = "./data"      # 資料存放路徑

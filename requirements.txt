@@ -1,0 +1,13 @@
+# Computer Vision Course - All Dependencies
+# 安裝方式: pip install -r requirements.txt
+
+# ============== DAY1 - OpenCV 影像處理 ==============
+opencv-python
+numpy
+Pillow
+
+# ============== DAY2 - PyTorch 深度學習 ==============
+torch
+torchvision
+matplotlib
+tqdm

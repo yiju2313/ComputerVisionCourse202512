@@ -59,7 +59,9 @@ DAY2/
 ├── README.md               # 本說明文件
 ├── 01_MNIST/               # MNIST 手寫數字辨識
 │   ├── train.py           # 訓練腳本
-│   └── predict.py         # 預測腳本
+│   ├── predict.py         # 預測腳本
+│   ├── realtime_webcam.py # WebCam 即時辨識
+│   └── draw_predict.py    # 滑鼠手寫辨識
 ├── 02_CatDog/              # 貓狗分類器
 │   ├── train.py           # 訓練腳本
 │   ├── predict.py         # 預測腳本
@@ -122,6 +124,47 @@ SimpleCNN
 | `mnist_cnn.pth` | 訓練好的模型權重 |
 | `training_history.png` | 訓練損失/準確率曲線 |
 | `prediction_samples.png` | 預測範例視覺化 |
+
+### 即時辨識功能
+
+訓練完成後，可以使用以下兩種即時辨識方式：
+
+#### 方式 A：WebCam 即時辨識
+
+使用攝影機拍攝紙張上的手寫數字進行辨識。
+
+```bash
+python realtime_webcam.py
+```
+
+**操作說明：**
+1. 將手寫數字紙張對準畫面中央的綠色框
+2. 按 `c` 擷取並辨識
+3. 按 `q` 退出程式
+
+**小技巧：**
+- 使用深色筆在白紙上書寫，效果最佳
+- 確保光線充足，避免陰影
+- 數字盡量置中於綠色框內
+
+#### 方式 B：滑鼠手寫辨識
+
+直接用滑鼠在畫布上書寫數字。
+
+```bash
+python draw_predict.py
+```
+
+**操作說明：**
+1. 按住滑鼠左鍵在黑色畫布上書寫數字
+2. 按 `p` 進行預測
+3. 按 `c` 清除畫布
+4. 按 `q` 退出程式
+
+**小技巧：**
+- 數字盡量寫大一些
+- 筆劃要連貫
+- 書寫風格可以參考 MNIST 資料集的樣式
 
 ---
 
